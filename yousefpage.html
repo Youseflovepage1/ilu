@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>this WebPage For My Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <p>Hello My Sweetheart Eptisam</p>
+  </header>
+
+  <main>
+    <h1>Hi, my love.
+      If I ever said something wrong or stumbled with my words, please forgive me — it’s just that I don’t know how to fully express how much I love you.
+      I’m sorry… and I know I’ve said ‘sorry’ a lot. But from this moment on, I promise I won’t hurt you again.
+      My love, I love you deeply — and I’ll stay with you forever, God willing. I’m yours, and only yours.
+      Stay mine, stay with me, forever.
+      iloveyou
+    </h1>
+
+    <h2>Days we've been together:</h2>
+    <div id="counter"></div>
+  </main>
+
+  <footer>
+    <a href="https://youtu.be/nyuo9-OjNNg?si=FEPKlaqjcmsDhiZI" class="custom-link">this is our song</a><br>
+    <h3>There is a gift here, but enter the code from the text above</h3>
+    <input type="password" id="passwordInput" placeholder="كلمة المرور">
+    <button onclick="checkPassword()">دخول</button>
+    <div id="message"></div>
+  </footer>
+
+  <script>
+    function checkPassword() {
+      var input = document.getElementById("passwordInput").value;
+      var message = document.getElementById("message");
+
+      message.style.fontSize = "20px";
+
+      if (input === "iloveyou") {
+        message.textContent = "❤️والله اني احبك اكثر شيء بالعالم والله يديمك لي ياحبيبتي يابسومه";
+        message.style.color = "#c2185b";
+      } else {
+        message.textContent = "❌ كلمة المرور غير صحيحة!";
+        message.style.color = "red";
+      }
+    }
+
+    const startDate = new Date("2024-04-11T00:00:00");
+    function updateCounter() {
+      const now = new Date();
+      const diffTime = now - startDate;
+      const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById("counter").innerText = `${days} Day`;
+    }
+    updateCounter();
+  </script>
+</body>
+</html>
